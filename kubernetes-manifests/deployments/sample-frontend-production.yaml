@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: sample-prod
+spec:
+    selector:
+      matchLabels:
+        app: sample
+        version: prod
+    template:
+      metadata:
+        labels:
+            app: sample
+            version: prod
+      spec:
+        containers:
+        - name: sample-prod
+          image: gcr.io/niveus-research-project/sample
+          imagePullPolicy: Always

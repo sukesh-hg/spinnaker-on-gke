@@ -1,0 +1,9 @@
+steps:
+ # build the container image
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['build', '-t', 'gcr.io/niveus-research-project/sample:v1', '.']
+ # push the container image to Container Registry
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['push', 'gcr.io/niveus-research-project/sample:v1']
+ images:
+ - 'gcr.io/niveus-research-project/sample:v1'

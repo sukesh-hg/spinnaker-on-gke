@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: sample-blue
+spec:
+    selector:
+      matchLabels:
+        app: sample
+        version: blue
+    template:
+      metadata:
+        labels:
+            app: sample
+            version: blue
+      spec:
+        containers:
+        - name: sample-blue
+          image: gcr.io/niveus-research-project/sample-bg
+          imagePullPolicy: Always

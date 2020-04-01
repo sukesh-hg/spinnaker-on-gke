@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: sample-canary
+spec:
+    selector:
+      matchLabels:
+        app: sample
+        version: canary
+    template:
+      metadata:
+        labels:
+            app: sample
+            version: canary
+      spec:
+        containers:
+        - name: sample-canary
+          image: gcr.io/niveus-research-project/sample
+          imagePullPolicy: Always

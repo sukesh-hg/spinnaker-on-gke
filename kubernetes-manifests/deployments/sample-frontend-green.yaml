@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: sample-green
+spec:
+    selector:
+      matchLabels:
+        app: sample
+        version: green
+    template:
+      metadata:
+        labels:
+            app: sample
+            version: green
+      spec:
+        containers:
+        - name: sample-green
+          image: gcr.io/niveus-research-project/sample-bg
+          imagePullPolicy: Always

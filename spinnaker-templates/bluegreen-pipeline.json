@@ -1,0 +1,259 @@
+{
+  "expectedArtifacts": [
+    {
+      "defaultArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "2e7b80c4-5c3d-4ed4-9c56-f0700d8464a5",
+        "name": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-blue.yaml",
+        "reference": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-blue.yaml",
+        "type": "gcs/object"
+      },
+      "displayName": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-blue.yaml",
+      "id": "37d0b450-c49f-4874-9b0b-2535c82b0ee6",
+      "matchArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "5d6263d1-e7e6-464d-855b-1a2bbb9a9a5c",
+        "name": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-blue.yaml",
+        "type": "gcs/object"
+      },
+      "useDefaultArtifact": true,
+      "usePriorArtifact": true
+    },
+    {
+      "defaultArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "edd02547-ef46-4fbd-b499-a178f6bf0572",
+        "name": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-green.yaml",
+        "reference": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-green.yaml",
+        "type": "gcs/object"
+      },
+      "displayName": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-green.yaml",
+      "id": "ca36e5bb-8071-47e6-bf8c-c86fadddc7eb",
+      "matchArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "8772b7b7-6849-4213-85f7-8da0ced6c13f",
+        "name": "gs://niveus-research-project-kubernetes-manifests/deployments/sample-frontend-green.yaml",
+        "type": "gcs/object"
+      },
+      "useDefaultArtifact": true,
+      "usePriorArtifact": true
+    },
+    {
+      "defaultArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "22f42efa-7c45-4a5e-a418-a478f66c7d5f",
+        "name": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-blue.yaml",
+        "reference": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-blue.yaml",
+        "type": "gcs/object"
+      },
+      "displayName": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-blue.yaml",
+      "id": "b9d977e1-6d4d-4b5b-b368-05c22aad8106",
+      "matchArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "0f5fe74a-dad2-43aa-b121-8d8aad370b2e",
+        "name": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-blue.yaml",
+        "type": "gcs/object"
+      },
+      "useDefaultArtifact": true,
+      "usePriorArtifact": true
+    },
+    {
+      "defaultArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "29bc8bdb-6093-4a20-9b9e-b5eaf1f35983",
+        "name": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-green.yaml",
+        "reference": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-green.yaml",
+        "type": "gcs/object"
+      },
+      "displayName": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-green.yaml",
+      "id": "d23d789d-349f-41a5-af66-4c968da6e24e",
+      "matchArtifact": {
+        "artifactAccount": "gcs-niveus-research-project",
+        "id": "4fcd87b4-85ad-41a5-99d6-7f7f9039489c",
+        "name": "gs://niveus-research-project-kubernetes-manifests/services/sample-frontend-green.yaml",
+        "type": "gcs/object"
+      },
+      "useDefaultArtifact": true,
+      "usePriorArtifact": true
+    },
+    {
+      "defaultArtifact": {
+        "artifactAccount": "docker-registry",
+        "id": "219e1625-a8f4-4119-b72d-9612645a0b92",
+        "name": "gcr.io/niveus-research-project/sample-bg",
+        "reference": "gcr.io/niveus-research-project/sample-bg",
+        "type": "docker/image",
+        "version": ""
+      },
+      "displayName": "gcr.io/niveus-research-project/sample-bg",
+      "id": "6ee7e152-b7be-4072-9412-14aeac6c450c",
+      "matchArtifact": {
+        "artifactAccount": "docker-registry",
+        "id": "e5e8a7fb-b9fc-4813-a9c0-a98dc480fd3b",
+        "name": "gcr.io/niveus-research-project/sample-bg",
+        "type": "docker/image"
+      },
+      "useDefaultArtifact": true,
+      "usePriorArtifact": true
+    }
+  ],
+  "keepWaitingPipelines": false,
+  "lastModifiedBy": "anonymous",
+  "limitConcurrent": true,
+  "stages": [
+    {
+      "account": "istio",
+      "cloudProvider": "kubernetes",
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": false,
+      "failPipeline": true,
+      "manifestArtifactAccount": "gcs-niveus-research-project",
+      "manifestArtifactId": "37d0b450-c49f-4874-9b0b-2535c82b0ee6",
+      "moniker": {
+        "app": "sample"
+      },
+      "name": "Deploy Blue",
+      "refId": "1",
+      "requiredArtifactIds": [],
+      "requiredArtifacts": [],
+      "requisiteStageRefIds": [],
+      "skipExpressionEvaluation": false,
+      "source": "artifact",
+      "trafficManagement": {
+        "enabled": false,
+        "options": {
+          "enableTraffic": false
+        }
+      },
+      "type": "deployManifest"
+    },
+    {
+      "failPipeline": true,
+      "judgmentInputs": [],
+      "name": "Deploy to Production?",
+      "notifications": [],
+      "refId": "3",
+      "requisiteStageRefIds": [
+        "1",
+        "6"
+      ],
+      "type": "manualJudgment"
+    },
+    {
+      "account": "istio",
+      "cloudProvider": "kubernetes",
+      "manifestArtifactAccount": "gcs-niveus-research-project",
+      "manifestArtifactId": "ca36e5bb-8071-47e6-bf8c-c86fadddc7eb",
+      "moniker": {
+        "app": "sample"
+      },
+      "name": "Deploy Green",
+      "refId": "4",
+      "requiredArtifactIds": [],
+      "requiredArtifacts": [],
+      "requisiteStageRefIds": [
+        "3"
+      ],
+      "skipExpressionEvaluation": false,
+      "source": "artifact",
+      "trafficManagement": {
+        "enabled": false,
+        "options": {
+          "enableTraffic": false,
+          "services": []
+        }
+      },
+      "type": "deployManifest"
+    },
+    {
+      "account": "istio",
+      "cloudProvider": "kubernetes",
+      "manifestArtifactAccount": "gcs-niveus-research-project",
+      "manifestArtifactId": "d23d789d-349f-41a5-af66-4c968da6e24e",
+      "moniker": {
+        "app": "sample"
+      },
+      "name": "Deploy Service",
+      "refId": "5",
+      "requisiteStageRefIds": [
+        "3"
+      ],
+      "skipExpressionEvaluation": false,
+      "source": "artifact",
+      "trafficManagement": {
+        "enabled": false,
+        "options": {
+          "enableTraffic": false,
+          "services": []
+        }
+      },
+      "type": "deployManifest"
+    },
+    {
+      "account": "istio",
+      "cloudProvider": "kubernetes",
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": false,
+      "failPipeline": true,
+      "manifestArtifactAccount": "gcs-niveus-research-project",
+      "manifestArtifactId": "b9d977e1-6d4d-4b5b-b368-05c22aad8106",
+      "moniker": {
+        "app": "sample"
+      },
+      "name": "Deploy Service",
+      "refId": "6",
+      "requisiteStageRefIds": [],
+      "skipExpressionEvaluation": false,
+      "source": "artifact",
+      "trafficManagement": {
+        "enabled": false,
+        "options": {
+          "enableTraffic": false,
+          "services": []
+        }
+      },
+      "type": "deployManifest"
+    },
+    {
+      "failPipeline": true,
+      "judgmentInputs": [],
+      "name": "Roll back?",
+      "notifications": [],
+      "refId": "7",
+      "requisiteStageRefIds": [
+        "4",
+        "5"
+      ],
+      "type": "manualJudgment"
+    },
+    {
+      "account": "istio",
+      "cloudProvider": "kubernetes",
+      "location": "default",
+      "manifestName": "deployment sample-green",
+      "mode": "static",
+      "name": "Deploy Blue",
+      "numRevisionsBack": 1,
+      "refId": "8",
+      "requisiteStageRefIds": [
+        "7"
+      ],
+      "type": "undoRolloutManifest"
+    }
+  ],
+  "triggers": [
+    {
+      "enabled": true,
+      "expectedArtifactIds": [
+        "6ee7e152-b7be-4072-9412-14aeac6c450c"
+      ],
+      "payloadConstraints": {
+        "tag": "gcr.io/niveus-research-project/sample-bg:v.*"
+      },
+      "pubsubSystem": "google",
+      "subscriptionName": "gcr-triggers",
+      "type": "pubsub"
+    }
+  ],
+  "updateTs": "1585674516716"
+}
