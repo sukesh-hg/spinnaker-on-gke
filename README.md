@@ -2,10 +2,10 @@
 Spinnaker is a continuous delivery tool that aims to make it easy to enhance cloud deployment models. Spinnaker facilitates the creation of pipelines that represent a delivery process that can begin with the creation of some deployable asset (such as a machine image, Jar file, or Docker image) and end with a deployment.
 
 PRE-REQUISITES
-Google Kubernetes Cluster (to deploy Spinnaker) with Helm installed
-Google Cloud Storage bucket
-Google Cloud Reporsitory (or any docker registry)
-GCP Service Account
+Google Kubernetes Cluster (to deploy Spinnaker) with Helm installed,
+Google Cloud Storage bucket,
+Google Cloud Reporsitory (or any docker registry),
+GCP Service Account.
 
 Install spinnaker using the stable helm chart 
 ./helm install -n default cd stable/spinnaker -f spinnaker-config.yaml \
